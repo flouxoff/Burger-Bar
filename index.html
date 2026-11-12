@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f1e7" />
+    <meta name="description" content="Burger Bar" />
+    <title>Burger Bar</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="#accueil" aria-label="Burger Bar, accueil"
+        >BURGER<span>BAR</span></a
+      >
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+        aria-label="Ouvrir le menu"
+      >
+        <span></span><span></span>
+      </button>
+      <nav
+        class="primary-nav"
+        id="primary-nav"
+        aria-label="Navigation principale"
+      >
+        <a href="#accueil">Accueil</a>
+        <a href="#slider">Burgers</a>
+        <a href="#temoignages">Témoignages</a>
+        <a class="nav-contact" href="#contact"
+          >Contact <span aria-hidden="true">↗</span></a
+        >
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="accueil" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-mark"></span> BURGER BAR</p>
+          <h1 id="hero-title">Burger<br /><span>Bar</span></h1>
+          <a class="round-link" href="#slider">
+            <span>Explorer</span
+            ><span class="round-link-icon" aria-hidden="true">↓</span>
+          </a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="hero-orbit"></div>
+          <div class="burger-illustration">
+            <div class="bun-top"><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="lettuce"></div>
+            <div class="tomato"></div>
+            <div class="cheese"></div>
+            <div class="patty"></div>
+            <div class="bun-bottom"></div>
+          </div>
+          <span class="art-caption">BB — 01</span>
+          <span class="art-sparkle sparkle-one">✳</span>
+          <span class="art-sparkle sparkle-two">✳</span>
+        </div>
+        <a class="scroll-cue" href="#slider"><span></span> Défiler</a>
+      </section>
+
+      <section
+        class="visual-section section-wrap"
+        id="slider"
+        aria-labelledby="visual-title"
+      >
+        <div class="section-heading">
+          <p class="eyebrow">01 / NOS BURGERS</p>
+          <h2 id="visual-title">Trois burgers.<br /><em>À découvrir.</em></h2>
+        </div>
+        <div
+          class="slider"
+          aria-roledescription="carrousel"
+          aria-label="Burgers Burger Bar"
+        >
+          <div class="slides">
+            <article
+              class="slide slide-basic is-active"
+              data-name="Le Basique"
+              aria-roledescription="diapositive"
+              aria-label="Le Basique, 1 sur 3"
+            >
+              <div class="burger-art burger-basic" aria-hidden="true">
+                <span class="bread-top"></span>
+                <span class="lettuce"></span>
+                <span class="tomato"></span>
+                <span class="onion"></span>
+                <span class="patty"></span>
+                <span class="sauce"></span>
+                <span class="bread-bottom"></span>
+              </div>
+              <div class="burger-info">
+                <p class="slide-index">01 / 03</p>
+                <h3>Le Basique</h3>
+                <p class="ingredients">
+                  Pain burger brioché · steak haché · salade · tomate · oignon
+                </p>
+              </div>
+            </article>
+            <article
+              class="slide slide-raclette"
+              data-name="Le Raclette"
+              aria-roledescription="diapositive"
+              aria-label="Le Raclette, 2 sur 3"
+              hidden
+            >
+              <div class="burger-art burger-raclette" aria-hidden="true">
+                <span class="bread-top"></span>
+                <span class="caramelized-onion"></span>
+                <span class="raclette-cheese"></span>
+                <span class="patty"></span>
+                <span class="raclette-cheese"></span>
+                <span class="bread-bottom"></span>
+              </div>
+              <div class="burger-info">
+                <p class="slide-index">02 / 03</p>
+                <h3>Le Raclette</h3>
+                <p class="ingredients">
+                  Pain burger brioché · steak haché · fromage à raclette ·
+                  oignons caramélisés
+                </p>
+              </div>
+            </article>
+            <article
+              class="slide slide-big"
+              data-name="Le Big"
+              aria-roledescription="diapositive"
+              aria-label="Le Big, 3 sur 3"
+              hidden
+            >
+              <div class="burger-art burger-big" aria-hidden="true">
+                <span class="bread-top"></span>
+                <span class="cheese"></span>
+                <span class="patty"></span>
+                <span class="cheese"></span>
+                <span class="patty"></span>
+                <span class="cheese"></span>
+                <span class="patty"></span>
+                <span class="cheese"></span>
+                <span class="patty"></span>
+                <span class="cheese"></span>
+                <span class="patty"></span>
+                <span class="cheese"></span>
+                <span class="bread-bottom"></span>
+              </div>
+              <div class="burger-info">
+                <p class="slide-index">03 / 03</p>
+                <h3>Le Big</h3>
+                <p class="ingredients">
+                  Pain burger brioché · 5 steaks · un max de fromage
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="slider-controls">
+            <div class="slider-dots" aria-label="Choisir un burger"></div>
+            <div class="slider-arrows">
+              <button
+                class="slider-arrow previous"
+                type="button"
+                aria-label="Burger précédent"
+              >
+                ←
+              </button>
+              <button
+                class="slider-arrow next"
+                type="button"
+                aria-label="Burger suivant"
+              >
+                →
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="testimonials section-wrap"
+        id="temoignages"
+        aria-labelledby="testimonials-title"
+      >
+        <div class="section-heading">
+          <p class="eyebrow">02 / TÉMOIGNAGES</p>
+          <h2 id="testimonials-title">
+            Ils ont goûté.<br /><em>Ils racontent.</em>
+          </h2>
+        </div>
+        <p class="review-disclaimer">
+          Témoignages fictifs, créés pour la maquette.
+        </p>
+        <div
+          class="review-carousel"
+          aria-roledescription="carrousel"
+          aria-label="Témoignages clients"
+        >
+          <div class="review-viewport">
+            <div class="review-track">
+              <article class="review-card">
+                <p class="review-index">AVIS 01</p>
+                <div
+                  class="review-rating"
+                  role="img"
+                  aria-label="5 étoiles sur 5"
+                >
+                  <span aria-hidden="true">★★★★★</span>
+                </div>
+                <blockquote>
+                  <p>
+                    « Le fromage à raclette et les oignons caramélisés vont
+                    vraiment bien ensemble. Je le reprendrais sans hésiter. »
+                  </p>
+                </blockquote>
+                <div class="review-meta">
+                  <cite>Camille</cite><span>Le Raclette</span>
+                </div>
+              </article>
+              <article class="review-card">
+                <p class="review-index">AVIS 02</p>
+                <div
+                  class="review-rating"
+                  role="img"
+                  aria-label="4 étoiles sur 5"
+                >
+                  <span aria-hidden="true">★★★★☆</span>
+                </div>
+                <blockquote>
+                  <p>
+                    « Le Basique est simple et efficace, avec juste ce qu’il
+                    faut de fraîcheur. »
+                  </p>
+                </blockquote>
+                <div class="review-meta">
+                  <cite>Léa</cite><span>Le Basique</span>
+                </div>
+              </article>
+              <article class="review-card">
+                <p class="review-index">AVIS 03</p>
+                <div
+                  class="review-rating"
+                  role="img"
+                  aria-label="5 étoiles sur 5"
+                >
+                  <span aria-hidden="true">★★★★★</span>
+                </div>
+                <blockquote>
+                  <p>
+                    « Le Big, c’est un sacré défi : j’ai calé avant d’avoir
+                    terminé les cinq steaks ! »
+                  </p>
+                </blockquote>
+                <div class="review-meta">
+                  <cite>Thomas</cite><span>Le Big</span>
+                </div>
+              </article>
+              <article class="review-card">
+                <p class="review-index">AVIS 04</p>
+                <div
+                  class="review-rating"
+                  role="img"
+                  aria-label="5 étoiles sur 5"
+                >
+                  <span aria-hidden="true">★★★★★</span>
+                </div>
+                <blockquote>
+                  <p>
+                    « Bien généreux en fromage, exactement le genre de burger
+                    que je cherchais. »
+                  </p>
+                </blockquote>
+                <div class="review-meta">
+                  <cite>Inès</cite><span>Le Raclette</span>
+                </div>
+              </article>
+              <article class="review-card">
+                <p class="review-index">AVIS 05</p>
+                <div
+                  class="review-rating"
+                  role="img"
+                  aria-label="4 étoiles sur 5"
+                >
+                  <span aria-hidden="true">★★★★☆</span>
+                </div>
+                <blockquote>
+                  <p>
+                    « J’ai voulu relever le défi du Big… et je n’ai pas réussi à
+                    le finir ! »
+                  </p>
+                </blockquote>
+                <div class="review-meta">
+                  <cite>Hugo</cite><span>Le Big</span>
+                </div>
+              </article>
+              <article class="review-card">
+                <p class="review-index">AVIS 06</p>
+                <div
+                  class="review-rating"
+                  role="img"
+                  aria-label="5 étoiles sur 5"
+                >
+                  <span aria-hidden="true">★★★★★</span>
+                </div>
+                <blockquote>
+                  <p>
+                    « Un burger classique qui m’a bien plu. Le mélange salade,
+                    tomate et sauce fonctionne bien. »
+                  </p>
+                </blockquote>
+                <div class="review-meta">
+                  <cite>Sarah</cite><span>Le Basique</span>
+                </div>
+              </article>
+              <article class="review-card">
+                <p class="review-index">AVIS 07</p>
+                <div
+                  class="review-rating"
+                  role="img"
+                  aria-label="4 étoiles sur 5"
+                >
+                  <span aria-hidden="true">★★★★☆</span>
+                </div>
+                <blockquote>
+                  <p>
+                    « Les cinq steaks du Big en font un burger vraiment
+                    impressionnant. »
+                  </p>
+                </blockquote>
+                <div class="review-meta">
+                  <cite>Mehdi</cite><span>Le Big</span>
+                </div>
+              </article>
+              <article class="review-card">
+                <p class="review-index">AVIS 08</p>
+                <div
+                  class="review-rating"
+                  role="img"
+                  aria-label="5 étoiles sur 5"
+                >
+                  <span aria-hidden="true">★★★★★</span>
+                </div>
+                <blockquote>
+                  <p>
+                    « Le fromage à raclette fond bien avec les oignons. Un
+                    burger bien réconfortant. »
+                  </p>
+                </blockquote>
+                <div class="review-meta">
+                  <cite>Julie</cite><span>Le Raclette</span>
+                </div>
+              </article>
+              <article class="review-card">
+                <p class="review-index">AVIS 09</p>
+                <div
+                  class="review-rating"
+                  role="img"
+                  aria-label="5 étoiles sur 5"
+                >
+                  <span aria-hidden="true">★★★★★</span>
+                </div>
+                <blockquote>
+                  <p>
+                    « Le Big porte bien son nom : cinq steaks et beaucoup de
+                    fromage, il ne passe pas inaperçu. »
+                  </p>
+                </blockquote>
+                <div class="review-meta">
+                  <cite>Lucas</cite><span>Le Big</span>
+                </div>
+              </article>
+              <article class="review-card">
+                <p class="review-index">AVIS 10</p>
+                <div
+                  class="review-rating"
+                  role="img"
+                  aria-label="4 étoiles sur 5"
+                >
+                  <span aria-hidden="true">★★★★☆</span>
+                </div>
+                <blockquote>
+                  <p>
+                    « Bon équilibre entre le steak, les légumes et la sauce.
+                    Simple, mais réussi. »
+                  </p>
+                </blockquote>
+                <div class="review-meta">
+                  <cite>Emma</cite><span>Le Basique</span>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="review-controls">
+            <button
+              class="review-control review-previous"
+              type="button"
+              aria-label="Avis précédent"
+            >
+              ←
+            </button>
+            <span class="review-counter" aria-live="polite"></span>
+            <button
+              class="review-control review-toggle"
+              type="button"
+              aria-pressed="false"
+            >
+              Pause
+            </button>
+            <button
+              class="review-control review-next"
+              type="button"
+              aria-label="Avis suivant"
+            >
+              →
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="contact-section"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+        <div class="contact-inner">
+          <div class="contact-copy">
+            <p class="eyebrow">03 / CONTACT</p>
+            <h2 id="contact-title">On vous<br /><em>écoute.</em></h2>
+            <p class="contact-note">
+              Envoi simulé pour la maquette : aucun message ne sera réellement
+              transmis.
+            </p>
+          </div>
+          <form class="contact-form">
+            <label for="name">Votre nom</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              autocomplete="name"
+              placeholder="Nom"
+              required
+            />
+
+            <label for="email">Votre e-mail</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="nom@exemple.fr"
+              required
+            />
+
+            <label for="message">Votre message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="3"
+              placeholder="Écrivez votre message…"
+              required
+            ></textarea>
+
+            <button class="submit-button" type="submit">
+              Envoyer le message <span aria-hidden="true">↗</span>
+            </button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a
+        class="wordmark"
+        href="#accueil"
+        aria-label="Burger Bar, retour en haut"
+        >BURGER<span>BAR</span></a
+      >
+      <a class="back-to-top" href="#accueil"
+        >Retour en haut <span aria-hidden="true">↑</span></a
+      >
+      <span class="footer-mark" aria-hidden="true">BB</span>
+    </footer>
+  </body>
+</html>
