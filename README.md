@@ -2,6 +2,8 @@
 
 Site vitrine statique construit en HTML, CSS et JavaScript, sans dépendance de build.
 
+Ce projet a été réalisé dans le cadre d'un projet scolaire.
+
 ## Aperçu local
 
 Ouvrir `index.html` dans un navigateur. Le menu mobile, les sliders et le formulaire sont interactifs. Le formulaire affiche une confirmation simulée, sans transmettre les messages.
